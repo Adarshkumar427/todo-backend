@@ -1,0 +1,288 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Todo App",
+    "dateExported": "2024-08-31T10:44:05.042Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "871d3dc4-eb85-445a-b3a8-88edb8245f58",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-08-31T10:15:26.054Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "06a9ebd0-7d23-4a44-9065-3e11b395f300",
+            "name": "Auth",
+            "containerId": "",
+            "created": "2024-08-31T10:17:34.684Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "2253737c-5be5-4dc8-bdbb-fb4c53cf8270",
+            "name": "Todo",
+            "containerId": "",
+            "created": "2024-08-31T10:35:53.770Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "b22db4d0-64d7-46ee-9f54-7d1c16889906",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "",
+            "name": "/api",
+            "url": "{{local}}",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-08-31T10:15:00.120Z",
+            "modified": "2024-08-31T10:15:48.599Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "467ec41f-0af7-4845-bcef-91f2bba96594",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "871d3dc4-eb85-445a-b3a8-88edb8245f58",
+            "name": "/",
+            "url": "{{local}}/users",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-08-31T10:15:35.926Z",
+            "modified": "2024-08-31T10:20:18.130Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Rituraj Shakti\",\n  \"email\": \"riturajshakti@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ed7d00af-4ea7-454b-beeb-34dcdb398284",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "06a9ebd0-7d23-4a44-9065-3e11b395f300",
+            "name": "/login",
+            "url": "{{local}}/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-31T10:17:42.803Z",
+            "modified": "2024-08-31T10:18:56.129Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"riturajshakti@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cb3e0c0a-6c7c-4234-88e9-f6e8d8d9b946",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "871d3dc4-eb85-445a-b3a8-88edb8245f58",
+            "name": "/",
+            "url": "{{local}}/users",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-08-31T10:20:02.938Z",
+            "modified": "2024-08-31T10:20:11.453Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "f539991f-f212-44f6-b032-daef79091bb7",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "871d3dc4-eb85-445a-b3a8-88edb8245f58",
+            "name": "/",
+            "url": "{{local}}/users",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2024-08-31T10:20:22.983Z",
+            "modified": "2024-08-31T10:21:49.683Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"_name\": \"Rituraj Shakti\",\n  \"_email\": \"riturajshakti@gmail.com\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "64dc2e1c-c9e3-4214-b787-a62af599b982",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "2253737c-5be5-4dc8-bdbb-fb4c53cf8270",
+            "name": "/",
+            "url": "{{local}}/todos",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-08-31T10:36:07.977Z",
+            "modified": "2024-08-31T10:39:05.713Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"task\": \"check your apis\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "98dabdc3-9564-4806-b086-9cf76fae97c3",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "871d3dc4-eb85-445a-b3a8-88edb8245f58",
+            "name": "/photo",
+            "url": "{{local}}/users/photo",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-08-31T10:22:23.624Z",
+            "modified": "2024-08-31T10:23:30.376Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formdata",
+                "raw": "",
+                "form": [],
+                "files": [
+                    {
+                        "name": "photo",
+                        "value": "c:\\Users\\ritur\\Pictures\\birthday-cake_2454297.png"
+                    }
+                ]
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "31742865-1b80-43ec-9498-8dabd7359588",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "2253737c-5be5-4dc8-bdbb-fb4c53cf8270",
+            "name": "/",
+            "url": "{{local}}/todos?limit=3&page=1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-08-31T10:39:13.894Z",
+            "modified": "2024-08-31T10:40:56.558Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "limit",
+                    "value": "3",
+                    "isPath": false
+                },
+                {
+                    "name": "page",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "gym",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a3b86e2-d570-4c66-9fad-3f5b7209f660",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "871d3dc4-eb85-445a-b3a8-88edb8245f58",
+            "name": "/photo",
+            "url": "{{local}}/users/photo",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-08-31T10:31:25.960Z",
+            "modified": "2024-08-31T10:31:37.531Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a298b2f-d6e5-4bb9-bd69-c5daf4699918",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "2253737c-5be5-4dc8-bdbb-fb4c53cf8270",
+            "name": "/:id",
+            "url": "{{local}}/todos/66d2f2c970772c03fec7b8e5",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-08-31T10:41:22.233Z",
+            "modified": "2024-08-31T10:42:22.576Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "07526e76-c558-4364-80bc-949d4198f2ef",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "2253737c-5be5-4dc8-bdbb-fb4c53cf8270",
+            "name": "/:id",
+            "url": "{{local}}/todos/66d2f2c970772c03fec7b8e5",
+            "method": "PATCH",
+            "sortNum": 70000,
+            "created": "2024-08-31T10:42:32.465Z",
+            "modified": "2024-08-31T10:43:15.454Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"task\": \"check all your apis\",\n  \"done\": true\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "0ad9f1ac-e21f-4a2c-a2a9-8c7677cad164",
+            "colId": "b579a7e3-16b5-45f9-b4e3-7c4de3ca8516",
+            "containerId": "2253737c-5be5-4dc8-bdbb-fb4c53cf8270",
+            "name": "/:id",
+            "url": "{{local}}/todos/66d2f2b070772c03fec7b8de",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2024-08-31T10:43:28.017Z",
+            "modified": "2024-08-31T10:43:39.586Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#282E36",
+    "titleBar.activeBackground": "#38404C",
+    "titleBar.activeForeground": "#F9FAFB"
+  },
+  "cSpell.words": [
+    "fullname",
+    "mongoid",
+    "todos",
+    "uploaders"
+  ]
+}
